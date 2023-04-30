@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const AppDataSource = new DataSource({
-    type: "mysql",
+    type: 'mysql',
     host: process.env.DB_HOST,
     port: 3306,
     username: process.env.DB_USER,
@@ -13,7 +13,7 @@ const AppDataSource = new DataSource({
     timezone: 'Z',
     synchronize: false,
     logging: true,
-    entities: [join(__dirname, './../../entities/{*.ts,*.js}')],
+    entities: [join(__dirname, './../../entities/{*.ts,*.js}')]
 });
 
-export { AppDataSource }
+export { AppDataSource };
