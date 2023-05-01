@@ -19,7 +19,7 @@ const shouldDoneGroup = (group: Group, today: Date): boolean => {
 };
 
 const doneGroups = async () => {
-    if (!AppDataSource.isConnected) {
+    if (!AppDataSource.isInitialized) {
         await AppDataSource.initialize();
     }
     const groupRepository = AppDataSource.getRepository(Group);
