@@ -64,7 +64,11 @@ const myHandler = async () => {
             statusCode: 200,
             body: JSON.stringify({
                 message: 'Done groups'
-            })
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*',
+            }
         };
     } catch (err) {
         console.log(err);
@@ -72,7 +76,11 @@ const myHandler = async () => {
             statusCode: 500,
             body: JSON.stringify({
                 message: 'Some error happened'
-            })
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*',
+            }
         };
     }
 };
